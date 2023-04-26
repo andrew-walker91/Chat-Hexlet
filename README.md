@@ -2,7 +2,7 @@
 
 # Hexlet Chat:
 
-Hello! My name is Andrey Gulyaykin and this is my fourth frontend project on Hexlet.
+Hello! My name is Andrey Gulyaykin and this is my fourth **frontend** project on Hexlet.
 
 ![meme](frontend/src/assets/meme.jpg)
 
