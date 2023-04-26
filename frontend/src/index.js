@@ -1,10 +1,5 @@
 /* eslint-disable functional/no-expression-statements */
-import ReactDOM from 'react-dom/client';
-import init from './init.jsx';
+import './styles/index.scss';
+import initApp from './init.jsx';
 
-const app = async () => {
-  const root = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(await init());
-};
-
-app();
+initApp();
