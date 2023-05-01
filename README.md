@@ -15,7 +15,7 @@ Just 3 commands for a quick start
 ```
 git clone git@github.com:andrew-walker91/frontend-project-12
 make install
-make build
+make start
 ```
 
 ## Demonstration:  
