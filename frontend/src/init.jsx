@@ -10,10 +10,10 @@ import { Provider as RollbarProvider, ErrorBoundary } from '@rollbar/react';
 import App from './components/App.jsx';
 import resources from './locales/index.js';
 import store from './slices/index.js';
-import socketApi from './socketApi/api.js';
+import chatApi from './chatApi/api.js';
 import SocketProvider from './contexts/SocketProvider.jsx';
 
-const init = async () => {
+const init = async (socket) => {
   const rollbarConfig = {
     accessToken: process.env.REACT_APP_ROLLBAR_ACCESS_TOKEN,
     enabled: process.env.NODE_ENV === 'production',
@@ -22,7 +22,7 @@ const init = async () => {
     environment: 'production',
   };
 
-  const api = socketApi();
+  const api = chatApi(socket, store);
   const i18n = i18next.createInstance();
 
   await i18n
