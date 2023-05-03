@@ -15,14 +15,12 @@ import SocketProvider from './contexts/SocketProvider.jsx';
 
 const init = async () => {
   const rollbarConfig = {
-    accessToken: '08a32334970c4dec8811442993fe7fcc',
-    environment: 'testenv',
+    accessToken: process.env.REACT_APP_ROLLBAR_ACCESS_TOKEN,
+    enabled: process.env.NODE_ENV === 'production',
+    captureUncaught: true,
+    captureUnhandledRejections: true,
+    environment: 'production',
   };
-
-  function TestError() {
-    const a = null;
-    return a.hello();
-  }
 
   const api = socketApi();
   const i18n = i18next.createInstance();
@@ -42,7 +40,6 @@ const init = async () => {
           <SocketProvider api={api}>
             <I18nextProvider i18n={i18n}>
               <App />
-              <TestError />
             </I18nextProvider>
           </SocketProvider>
         </StoreProvider>
