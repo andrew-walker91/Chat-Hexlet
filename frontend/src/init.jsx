@@ -8,10 +8,11 @@ import { Provider as StoreProvider } from 'react-redux';
 import { Provider as RollbarProvider, ErrorBoundary } from '@rollbar/react';
 
 import App from './components/App.jsx';
+import SocketProvider from './contexts/SocketProvider.jsx';
+
 import resources from './locales/index.js';
 import store from './slices/index.js';
 import chatApi from './chatApi/api.js';
-import SocketProvider from './contexts/SocketProvider.jsx';
 
 const init = async (socket) => {
   const rollbarConfig = {
