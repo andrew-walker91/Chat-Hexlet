@@ -72,8 +72,12 @@ make start
 
 ㅤ
  ### Watch the demo video:
-\
- <video src="frontend/src/assets/decoration/demo.mp4" controls title="Title"></video>
+
+
+
+https://user-images.githubusercontent.com/109623320/236293914-7d35bba3-a283-4391-a678-0c7d0fcbd519.mp4
+
+
 
 
 ㅤ
