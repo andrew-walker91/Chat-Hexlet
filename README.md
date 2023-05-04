@@ -71,8 +71,9 @@ make start
 ![chat-page](frontend/src/assets/decoration/chat_page.png)
 
 ㅤ
- ### Watch the demo video
- [![demo](https://img.youtube.com/vi/1zwhI0CKF3I/0.jpg)](https://youtu.be/1zwhI0CKF3I)
+ ### Watch the demo video:
+\
+ <video src="frontend/src/assets/decoration/demo.mp4" controls title="Title"></video>
 
 
 ㅤ
