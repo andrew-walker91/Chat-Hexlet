@@ -12,19 +12,22 @@ const messagesSlice = createSlice({
   initialState,
 
   reducers: {
-    addMessage: (state, { payload }) => {
-      state.messages = [...state.messages, payload];
-    },
+    addMessage: (state, { payload }) => ({
+      ...state,
+      messages: [...state.messages, payload],
+    }),
 
-    removeAllChannelMessages: (state, { payload }) => {
-      state.messages = state.messages.filter((el) => el.channelId !== payload.id);
-    },
+    removeAllChannelMessages: (state, { payload }) => ({
+      ...state,
+      messages: state.messages.filter((el) => el.channelId !== payload.id),
+    }),
   },
 
   extraReducers: (builder) => builder
-    .addCase(fetchData.fulfilled, (state, { payload }) => {
-      state.messages = payload.messages;
-    }),
+    .addCase(fetchData.fulfilled, (state, { payload }) => ({
+      ...state,
+      messages: payload.messages,
+    })),
 });
 
 export const { addMessage, removeAllChannelMessages } = messagesSlice.actions;
