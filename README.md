@@ -4,9 +4,15 @@
 
 Hello! My name is Andrey Gulyaykin and this is my fourth **frontend** project on Hexlet.
 
-![meme](frontend/src/assets/meme.jpg)
+![meme](frontend/src/assets/decoration/meme.jpg)
 
 ## Description:
+
+Hexlet Chat is a simplified version of Slack, where you can exchange messages in real time, create, delete and rename channels.
+
+The project implements filtering of obscene words, notification of user actions using pop-up messages.
+
+The project uses web sockets, interaction with the REST API, the use of React (with hooks), Redux (via reduxjs/toolkit), the organization of routing on the client, as well as user authorization and authentication.
 
 ## Installation:
 
@@ -17,22 +23,62 @@ git clone git@github.com:andrew-walker91/frontend-project-12
 make install
 make start
 ```
+## How to use:
+ - Register or log in with an administrator account
+
+    - Login: `admin`
+    - Password: `admin`
+
+
+ - Write something in the channels created by default
+ - Create a channel using ➕ on the left side of the application
+ - Enjoy this unobtrusive notification of successful channel creation
+ - You can express your delight even with the help of bad words, the application will take care of it
+
+ ## Tech stack
+
+ - React / React Hooks - user interfaces
+ - Redux / Redux Toolkit - state container
+ - Bootstrap - CSS Framework
+ - Socket.io - WebSocket based browser-server communication
+ - Axios - HTTP requests
+ - Formik - building forms on React
+ - Yup - form validation
+ - I18next - manage text
+ - React-toastify - pop-up notifications
+ - Leo-profanity - profanity filter
+ - Rollbar - error tracking
 
 ## Demonstration:  
+### Login page:
+\
+![login-page](frontend/src/assets/decoration/login_page.png)
+
+### Sign up page:
+\
+![signup-page](frontend/src/assets/decoration/signup_page.png)
+
 ### Main page:
 \
-![]()
+![main-page](frontend/src/assets/decoration/main_page.png)
 
-### 1:
+### Add channel:
 \
-![]()
+![add-channel](frontend/src/assets/decoration/add_channel.png)
 
-### 2:
+### Chat page:
 \
-![]()
+![chat-page](frontend/src/assets/decoration/chat_page.png)
 
-### 3:
-\
-![]()
 
-# Click [here](https://chat-hexlet.up.railway.app/) to view in the browser
+<details>
+ <summary>Click to watch the demo video</summary>
+ [![demo]()](https://www.youtube.com/watch?v=1zwhI0CKF3I)
+</details>
+
+ㅤ
+ㅤ
+ㅤ
+
+
+# Click [here](https://chat-hexlet.up.railway.app/) to try in the browser
