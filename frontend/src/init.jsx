@@ -1,4 +1,3 @@
-/* eslint-disable functional/no-expression-statements */
 import filter from 'leo-profanity';
 import React from 'react';
 import ReactDOM from 'react-dom/client';

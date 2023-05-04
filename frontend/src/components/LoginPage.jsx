@@ -1,5 +1,3 @@
-/* eslint-disable functional/no-conditional-statements */
-/* eslint-disable functional/no-expression-statements */
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import React, { useEffect, useRef, useState } from 'react';

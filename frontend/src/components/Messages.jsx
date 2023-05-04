@@ -1,5 +1,3 @@
-/* eslint-disable functional/no-conditional-statements */
-/* eslint-disable functional/no-expression-statements */
 import filter from 'leo-profanity';
 import { toast } from 'react-toastify';
 import React, { useRef, useEffect } from 'react';

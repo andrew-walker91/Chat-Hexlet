@@ -1,4 +1,3 @@
-/* eslint-disable functional/no-expression-statements */
 import React, { useState, useMemo } from 'react';
 
 import AuthContext from './index.js';
