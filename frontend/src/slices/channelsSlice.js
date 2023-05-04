@@ -15,33 +15,53 @@ const channelsSlice = createSlice({
   initialState,
 
   reducers: {
-    addChannel: (state, { payload }) => {
-      state.channels = [...state.channels, payload];
-    },
+    addChannel: (state, { payload }) => ({
+      ...state,
+      channels: [...state.channels, payload],
+    }),
 
-    changeCurrentChannel: (state, { payload }) => {
-      state.currentChannelId = payload;
-    },
+    changeCurrentChannel: (state, { payload }) => ({
+      ...state,
+      currentChannelId: payload,
+    }),
 
     removeChannel: (state, { payload }) => {
-      state.channels = state.channels.filter((el) => el.id !== payload.id);
+      const newChannels = state.channels.filter((el) => el.id !== payload.id);
 
-      if (state.currentChannelId === payload.id) {
-        state.currentChannelId = generalChannelId;
-      }
+      const newCurrentChannelId = state.currentChannelId === payload.id
+        ? generalChannelId
+        : state.currentChannelId;
+
+      return {
+        ...state,
+        channels: newChannels,
+        currentChannelId: newCurrentChannelId,
+      };
     },
 
     renameChannel: (state, { payload }) => {
       const { id, name } = payload;
-      state.channels.find((el) => el.id === id).name = name;
+
+      const newChannels = state.channels.map((el) => {
+        if (el.id === id) {
+          return { ...el, name };
+        }
+        return el;
+      });
+
+      return {
+        ...state,
+        channels: newChannels,
+      };
     },
   },
 
   extraReducers: (builder) => builder
-    .addCase(fetchData.fulfilled, (state, action) => {
-      state.channels = action.payload.channels;
-      state.currentChannelId = action.payload.currentChannelId;
-    }),
+    .addCase(fetchData.fulfilled, (state, action) => ({
+      ...state,
+      channels: action.payload.channels,
+      currentChannelId: action.payload.currentChannelId,
+    })),
 });
 
 export const {
