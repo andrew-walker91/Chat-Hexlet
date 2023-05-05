@@ -1,12 +1,12 @@
 import { toast } from 'react-toastify';
 
-import { addMessage, removeAllChannelMessages } from '../slices/messagesSlice.js';
+import { addMessage, removeAllChannelMessages } from '../slices/messagesSlice';
 import {
   addChannel,
   changeCurrentChannel,
   removeChannel as removeChannelById,
   renameChannel as renameChannelById,
-} from '../slices/channelsSlice.js';
+} from '../slices/channelsSlice';
 
 const chatApi = (socket, store) => {
   const { dispatch } = store;

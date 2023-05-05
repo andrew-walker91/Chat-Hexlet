@@ -6,12 +6,12 @@ import { I18nextProvider, initReactI18next } from 'react-i18next';
 import { Provider as StoreProvider } from 'react-redux';
 import { Provider as RollbarProvider, ErrorBoundary } from '@rollbar/react';
 
-import App from './components/App.jsx';
-import SocketProvider from './contexts/SocketProvider.jsx';
+import App from './components/App';
+import SocketProvider from './contexts/SocketProvider';
 
-import resources from './locales/index.js';
-import store from './slices/index.js';
-import chatApi from './chatApi/api.js';
+import resources from './locales';
+import store from './slices';
+import chatApi from './chatApi/api';
 
 const init = async (socket) => {
   const rollbarConfig = {

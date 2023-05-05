@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import fetchData from './fetchData.js';
+import fetchData from './fetchData';
 
 const generalChannelId = 1;
 

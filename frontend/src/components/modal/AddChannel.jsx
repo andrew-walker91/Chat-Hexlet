@@ -3,11 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { useFormik } from 'formik';
 
-import ModalInput from './ModalInput.jsx';
+import ModalInput from './ModalInput';
 
-import useSocket from '../../hooks/socket.js';
-import { closeModal } from '../../slices/modalSlice.js';
-import { newChannelSchema } from '../../validation/validationSchema.js';
+import useSocket from '../../hooks/socket';
+import { closeModal } from '../../slices/modalSlice';
+import { newChannelSchema } from '../../validation/validationSchema';
 
 const AddChannel = () => {
   const { t } = useTranslation();

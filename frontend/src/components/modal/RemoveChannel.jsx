@@ -4,8 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { Modal, Button } from 'react-bootstrap';
 
-import useSocket from '../../hooks/socket.js';
-import { closeModal } from '../../slices/modalSlice.js';
+import useSocket from '../../hooks/socket';
+import { closeModal } from '../../slices/modalSlice';
 
 const RemoveChannel = () => {
   const { t } = useTranslation();
