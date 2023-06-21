@@ -15,8 +15,12 @@ export default {
     messageBody: 'Сообщение не может быть пустым',
     send: 'Отправить',
     cancel: 'Отменить',
+    loading: 'Идет загрузка...',
+    error: 'Ошибка',
+    update: 'Обновить',
+    reauthorization: 'Переавторизоваться',
 
-    registrationRules: {
+    regRules: {
       name: 'От 3 до 20 символов',
       password: 'Не менее 6 символов',
       passwordEquality: 'Пароли должны совпадать',
@@ -26,7 +30,7 @@ export default {
       login: 'Ваш ник',
       username: 'Имя пользователя',
       password: 'Пароль',
-      passwordConfirmation: 'Подтвердите пароль',
+      confirmPassword: 'Подтвердите пароль',
       newMessage: 'Введите сообщение...',
     },
 
