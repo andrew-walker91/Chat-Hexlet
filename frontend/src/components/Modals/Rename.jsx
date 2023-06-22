@@ -73,7 +73,7 @@ const Rename = () => {
               disabled={formik.isSubmitting}
               name="body"
             />
-            <Form.Label visuallyHidden>{t('renameChannel')}</Form.Label>
+            <Form.Label visuallyHidden>{t('modal.channelName')}</Form.Label>
             <Form.Control.Feedback type="invalid">{formik.errors.body}</Form.Control.Feedback>
             <Modal.Footer>
               <Button variant="secondary" onClick={handleClose}>{t('cancel')}</Button>
