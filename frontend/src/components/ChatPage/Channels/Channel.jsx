@@ -37,7 +37,7 @@ const Channel = ({ isActive, channel }) => {
           </Button>
 
           <Dropdown.Toggle split variant={isActive ? 'secondary' : null} className="flex-grow-0" id="dropdown-split-basic">
-            <span className="visually-hidden">{t('modal.toogle')}</span>
+            <span className="visually-hidden">{t('modal.toggle')}</span>
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
